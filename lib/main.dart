@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:nahal_it/aiden/log_in_one.dart';
-import 'package:nahal_it/aiden/splash_screen.dart';
+import 'package:nahal_it/aiden/log_in_two.dart';
+import 'package:nahal_it/aiden/sign_in.dart';
+import 'package:nahal_it/amiri/work_samples.dart';
 import 'package:nahal_it/cart_provider.dart';
 import 'package:provider/provider.dart';
+import 'aiden/log_in_one.dart';
 import 'amiri/widgets.dart';
 import 'home_screen.dart';
 
@@ -42,9 +44,11 @@ class MyApp extends StatelessWidget {
             ),
             body: //CartScreen()
                 //  SellingPage(),
-                const HomeScreen(),
-            //   SplashScreen(),
-            // LogInOne(),
+                // WorkSamples(),
+                //  const HomeScreen(),
+                //   SplashScreen(),
+                // SignIn(),
+                const LogInTwo(),
           ),
         );
       }),

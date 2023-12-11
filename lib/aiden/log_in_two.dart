@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:nahal_it/aiden/sign_in.dart';
+import 'package:nahal_it/malika/color&font_managment.dart';
 
 import '../home_screen.dart';
 
@@ -22,63 +23,72 @@ class _SignInTwoState extends State<LogInTwo> {
           decoration: const BoxDecoration(
               gradient: LinearGradient(
             colors: [
+              Colors.teal,
               Color.fromARGB(255, 213, 241, 198),
-              Color.fromARGB(255, 2, 179, 11),
+              // Color.fromARGB(255, 2, 179, 11),
             ],
             begin: FractionalOffset(0.0, 0.0),
             end: FractionalOffset(0.0, 1.5),
             stops: [0.0, 1.5],
             tileMode: TileMode.clamp,
           )),
-          child: Center(
-            child: Column(children: [
-              const Padding(
-                padding: EdgeInsets.all(8.0),
-                child: Text(
-                  'Continue with E-mail',
-                  style: TextStyle(fontSize: 30, fontWeight: FontWeight.w500),
-                ),
+          child: Column(children: [
+            const Padding(
+              padding: EdgeInsets.all(30.0),
+              child: Text(
+                'Continue with E-mail',
+                style: TextStyle(fontSize: 30, fontWeight: FontWeight.w500),
               ),
-              const Padding(
-                padding: EdgeInsets.all(8.0),
-                child: SizedBox(
-                  width: 300,
-                  child: TextField(
-                    keyboardType: TextInputType.emailAddress,
-                    decoration: InputDecoration(
-                      hintText: 'Enter your E-mail address',
-                      hintStyle: TextStyle(fontSize: 12),
-                      labelText: 'E-mail',
-                      labelStyle: TextStyle(fontSize: 20),
-                    ),
-                  ),
-                ),
+            ),
+            //  SizedBox(height: size.width / 9),
+            SizedBox(height: size.width / 6),
+            Container(
+              decoration: BoxDecoration(
+                  color: Colors.white, borderRadius: BorderRadius.circular(10)),
+              width: size.width / 1.2,
+              child: TextField(
+                keyboardType: TextInputType.visiblePassword,
+                decoration: InputDecoration(
+                    border: OutlineInputBorder(
+                        borderSide:
+                            const BorderSide(width: 3, color: Colors.white),
+                        borderRadius: BorderRadius.circular(10)),
+                    fillColor: Colors.white,
+                    // border: Bo
+                    prefixIcon: const Icon(Icons.call_rounded),
+                    labelText: 'شماره تلفن',
+                    labelStyle: login,
+                    hintText: 'شماره را وارد کنید',
+                    hintStyle: log),
               ),
-              const Padding(
-                padding: EdgeInsets.all(30.0),
-                child: SizedBox(
-                  width: 300,
-                  child: TextField(
-                    keyboardType: TextInputType.visiblePassword,
-                    decoration: InputDecoration(
-                        labelText: 'Password',
-                        labelStyle: TextStyle(fontSize: 20),
-                        hintText: 'Enter your password',
-                        hintStyle: TextStyle(fontSize: 12)),
-                  ),
-                ),
+            ),
+            SizedBox(height: size.width / 6),
+
+            Container(
+              decoration: BoxDecoration(
+                  color: Colors.white, borderRadius: BorderRadius.circular(10)),
+              width: size.width / 1.2,
+              child: TextField(
+                keyboardType: TextInputType.visiblePassword,
+                decoration: InputDecoration(
+                    border: OutlineInputBorder(
+                        borderSide:
+                            const BorderSide(width: 3, color: Colors.white),
+                        borderRadius: BorderRadius.circular(10)),
+                    fillColor: Colors.white,
+                    // border: Bo
+                    prefixIcon: const Icon(Icons.password_rounded),
+                    labelText: 'رمز  ',
+                    labelStyle: login,
+                    hintText: 'رمز',
+                    hintStyle: log),
               ),
-              const Text('I forgot my password'),
-              SizedBox(height: size.height / 2.5),
-              TextButton(
-                  onPressed: () {
-                    Navigator.of(context).pushNamed(SignIn.tag);
-                  },
-                  child: const Text(
-                    "Don't have account? Let's create !",
-                    style: TextStyle(fontSize: 17),
-                  )),
-              ElevatedButton(
+            ),
+            const Spacer(), const Text('I forgot my password'),
+            // SizedBox(height: size.height / 2.5),
+            SizedBox(
+              width: size.width / 1.2,
+              child: ElevatedButton(
                   onPressed: () {
                     Navigator.push(
                         context,
@@ -86,16 +96,39 @@ class _SignInTwoState extends State<LogInTwo> {
                             builder: (context) => const HomeScreen()));
                   },
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.purple[100],
-                    shape: const BeveledRectangleBorder(
+                    backgroundColor: Colors.purple,
+                    shape: const RoundedRectangleBorder(
                         borderRadius: BorderRadius.all(Radius.circular(10))),
                   ),
                   child: const Text(
-                    '       Next      ',
+                    'ادامه',
                     style: TextStyle(color: Colors.white, fontSize: 20),
-                  ))
-            ]),
-          ),
+                  )),
+            ),
+            const SizedBox(height: 10),
+
+            SizedBox(
+              width: size.width / 1.2,
+              child: ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const SignIn()));
+                  },
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.green,
+                    shape: const RoundedRectangleBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(10))),
+                  ),
+                  child: const Text(
+                    'حساب ندارم',
+                    style: TextStyle(color: Colors.white, fontSize: 20),
+                  )),
+            ),
+
+            const SizedBox(height: 30),
+          ]),
         ),
       ),
     );

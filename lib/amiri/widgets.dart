@@ -5,6 +5,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:nahal_it/aiden/log_in_two.dart';
 import 'package:nahal_it/cart_provider.dart';
 import 'package:nahal_it/malika/color&font_managment.dart';
+import 'package:nahal_it/malika/order_screen.dart';
 import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -38,7 +39,7 @@ class ContainerWithIndicator extends StatelessWidget {
                 child: Container(
                   width: double.infinity,
                   decoration: BoxDecoration(
-                      color: Colors.grey[100],
+                      color: Colors.blue[100],
                       borderRadius: BorderRadius.circular(15)),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -261,50 +262,24 @@ class DrawerBook extends StatelessWidget {
         indent: 20,
       ),
 
-      ListTile(
-        leading: Icon(
-          Icons.phone_outlined,
-          size: 28,
-          color: Colors.grey[400],
-        ),
-        title: const Text(
-          'تماس با ما',
-          style: profileTitle,
-        ),
-      ),
-      ListTile(
-        leading: Icon(
-          Icons.business_outlined,
-          size: 28,
-          color: Colors.grey[400],
-        ),
-        title: const Text(
-          'نمونه کارها',
-          style: profileTitle,
+      InkWell(
+        onTap: () {
+          Navigator.push(context,
+              MaterialPageRoute(builder: (context) => const OrdersScreen()));
+        },
+        child: ListTile(
+          leading: Icon(
+            Icons.phone_outlined,
+            size: 28,
+            color: Colors.grey[400],
+          ),
+          title: const Text(
+            'تماس با ما',
+            style: profileTitle,
+          ),
         ),
       ),
-      ListTile(
-        leading: Icon(
-          Icons.person_add_alt_1_outlined,
-          size: 28,
-          color: Colors.grey[400],
-        ),
-        title: const Text(
-          'خدمات ما',
-          style: profileTitle,
-        ),
-      ),
-      ListTile(
-        leading: Icon(
-          Icons.qr_code_2_outlined,
-          size: 28,
-          color: Colors.grey[400],
-        ),
-        title: const Text(
-          'محصولات',
-          style: profileTitle,
-        ),
-      ),
+
       ListTile(
         leading: Icon(
           Icons.menu_book_outlined,
@@ -316,17 +291,7 @@ class DrawerBook extends StatelessWidget {
           style: profileTitle,
         ),
       ),
-      ListTile(
-        leading: Icon(
-          Icons.add_card_outlined,
-          size: 28,
-          color: Colors.grey[400],
-        ),
-        title: const Text(
-          'بلاگ',
-          style: profileTitle,
-        ),
-      ),
+
       ListTile(
           leading: Icon(
             Icons.shopping_cart_outlined,

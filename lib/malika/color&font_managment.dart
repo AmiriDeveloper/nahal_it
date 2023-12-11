@@ -65,3 +65,14 @@ const word = TextStyle(
   fontSize: 16,
   color: Colors.redAccent,
 );
+// log in one and log in two  font
+const login = TextStyle(
+  fontSize: 16,
+  color: Colors.black,
+  fontWeight: FontWeight.bold,
+);
+const log = TextStyle(
+  fontSize: 10,
+  color: Colors.grey,
+  fontWeight: FontWeight.bold,
+);

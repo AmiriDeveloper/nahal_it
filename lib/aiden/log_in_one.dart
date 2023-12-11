@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
-
 import 'log_in_two.dart';
 
 class LogInOne extends StatefulWidget {
@@ -23,16 +22,13 @@ class _LogInOneState extends State<LogInOne> {
           height: double.infinity,
           decoration: const BoxDecoration(
               gradient: LinearGradient(
-            colors: [
-              Color.fromARGB(255, 213, 241, 198),
-              Color.fromARGB(255, 2, 179, 11),
-            ],
+            colors: [Color(0x006b73ff), Color(0x00000dff)],
             begin: FractionalOffset(0.0, 0.0),
             end: FractionalOffset(0.2, 1.0),
-            stops: [0.0, 1.0],
-            tileMode: TileMode.clamp,
+            stops: [0.5, 1.0],
+            // tileMode: TileMode.clamp,
           )),
-          child: Column(children: [
+          child: Column(crossAxisAlignment: CrossAxisAlignment.end, children: [
             SizedBox(
               height: size.height / 1.5,
               width: double.infinity,
@@ -41,12 +37,13 @@ class _LogInOneState extends State<LogInOne> {
                   controller: controllerr,
                   itemBuilder: (context, index) {
                     return SizedBox(
+                      height: size.height / 1.0,
                       width: double.infinity,
                       child: Stack(children: [
                         // container and circlur avatar num 1
                         Positioned(
                           right: 10,
-                          top: 130,
+                          top: 90,
                           child: CircleAvatar(
                             radius: 40,
                             child: Center(
@@ -59,7 +56,7 @@ class _LogInOneState extends State<LogInOne> {
                         ),
                         Positioned(
                           right: 30,
-                          top: 100,
+                          top: 60,
                           child: Container(
                             height: size.width / 9.9,
                             width: size.width / 3.0,
@@ -104,7 +101,7 @@ class _LogInOneState extends State<LogInOne> {
                         // container and circlur avatar num 2
                         Positioned(
                           left: 40,
-                          top: 200,
+                          top: 170,
                           child: CircleAvatar(
                             radius: 50,
                             child: Image.asset(
@@ -115,7 +112,7 @@ class _LogInOneState extends State<LogInOne> {
                         ),
                         Positioned(
                           left: 60,
-                          top: 180,
+                          top: 140,
                           child: Container(
                               height: size.width / 9.9,
                               width: size.width / 3.0,
@@ -162,7 +159,7 @@ class _LogInOneState extends State<LogInOne> {
                         // container and circlur avatar num 3
                         Positioned(
                           left: size.width / 3.5,
-                          top: size.height / 2.4,
+                          top: size.height / 2.6,
                           child: CircleAvatar(
                             radius: 60,
                             child: Center(
@@ -174,11 +171,11 @@ class _LogInOneState extends State<LogInOne> {
                           ),
                         ),
                         Positioned(
-                          left: size.width / 2.5,
-                          top: size.height / 2.5,
+                          left: size.width / 2.8,
+                          top: size.height / 2.8,
                           child: Container(
                               height: size.width / 9.9,
-                              width: size.width / 3.0,
+                              width: size.width / 2.5,
                               decoration: BoxDecoration(
                                   color: Colors.white,
                                   borderRadius: BorderRadius.circular(20)),
@@ -218,13 +215,35 @@ class _LogInOneState extends State<LogInOne> {
                                 ],
                               )),
                         ),
+                        const Positioned(
+                          bottom: 30,
+                          right: 10,
+                          child: Text(
+                            "نهال آی تی اولین وبسایت خدماتی ",
+                            style: TextStyle(
+                                color: Colors.blueAccent,
+                                fontSize: 20,
+                                fontWeight: FontWeight.bold),
+                          ),
+                        ),
+                        const Positioned(
+                          bottom: 0,
+                          right: 10,
+                          child: Text(
+                            " فروشگاهی در حوزه آی تی در ایران ",
+                            style: TextStyle(
+                                color: Colors.blueAccent,
+                                fontSize: 20,
+                                fontWeight: FontWeight.bold),
+                          ),
+                        ),
                       ]),
                     );
                   }),
             ),
-            Positioned(
-              left: 10,
-              top: size.height / 1.5,
+            const SizedBox(height: 50),
+            Padding(
+              padding: const EdgeInsets.fromLTRB(0, 0, 20, 0),
               child: SmoothPageIndicator(
                 controller: controllerr,
                 count: 3,
@@ -235,39 +254,38 @@ class _LogInOneState extends State<LogInOne> {
                     activeDotColor: Colors.tealAccent),
               ),
             ),
-            Expanded(
-              flex: 1,
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  ElevatedButton(
-                    onPressed: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const LogInTwo()));
-                    },
-                    child: Container(
-                      width: 230,
-                      height: 50,
-                      decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(25)),
-                      child: const Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Icon(Icons.login),
-                          Text(
-                            ' Continue with E-mail',
-                            style: TextStyle(fontSize: 16),
-                          ),
-                        ],
+            const Spacer(),
+            Center(
+              child: ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const LogInTwo()));
+                },
+                child: Container(
+                  width: 230,
+                  height: 50,
+                  decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(25)),
+                  child: const Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Icon(Icons.login),
+                      Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text(
+                          'ادامه با شماره',
+                          style: TextStyle(fontSize: 16),
+                        ),
                       ),
-                    ),
+                    ],
                   ),
-                ],
+                ),
               ),
-            )
+            ),
+            const SizedBox(height: 20)
           ]),
         ),
       ),

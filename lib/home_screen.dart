@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:nahal_it/amiri/news_api.dart';
 import 'package:nahal_it/cart_provider.dart';
-import 'package:nahal_it/malika/order_screen.dart';
 import 'package:nahal_it/malika/word_press.dart';
 import 'package:nahal_it/amiri/news_page.dart';
 import 'package:nahal_it/amiri/widgets.dart';
 import 'package:provider/provider.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
+import 'package:url_launcher/url_launcher.dart';
 import 'amiri/api.dart';
 import 'amiri/cart_screen.dart';
 import 'package:badges/badges.dart' as badges;
@@ -33,13 +33,16 @@ class _HomeScreenState extends State<HomeScreen> {
 
   final _controler = PageController();
 
+  List urls = [
+    "https://nahalit.com/%d8%aa%d8%af%d9%88%db%8c%d9%86-%d9%be%d8%b1%d9%88%d9%be%d9%88%d8%b2%d8%a7%d9%84/",
+    "https://nahalit.com/%da%af%d8%b1%d8%a7%d9%81%db%8c%da%a9/",
+    "https://nahalit.com/%da%af%d8%b1%d8%a7%d9%81%db%8c%da%a9/",
+    "https://nahalit.com/%d8%ae%d8%af%d9%85%d8%a7%d8%aa-%d8%aa%d8%af%d9%88%db%8c%d9%86-%d8%b5%d8%af%d8%a7-%d9%88-%d8%b5%d8%af%d8%a7-%da%af%d8%b0%d8%a7%d8%b1%db%8c/",
+    "https://nahalit.com/%D8%AE%D8%AF%D9%85%D8%A7%D8%AA-%D9%BE%D8%B1%DB%8C%D9%85%DB%8C%D8%B1-%D8%AA%D8%AF%D9%88%DB%8C%D9%86-%D9%81%DB%8C%D9%84%D9%85/",
+    "https//nahalit.com/%d9%81%d8%b1%d9%88%d8%b4-%d8%b3%d8%a7%db%8c%d8%aa-%d8%a7%d8%ae%d8%aa%d8%b5%d8%a7%d8%b5%db%8c-%d9%88-%d8%a7%d9%82%d8%aa%d8%b5%d8%a7%d8%af%db%8c/",
+  ];
+
   List title = [
-    "اموزش وردپرس",
-    "ثبت سفارش",
-    "پریمر",
-    "طراحی سایت",
-    "اپلیکیشن",
-    "سئو",
     "ui/ux",
     "پروشور",
     "پوستر",
@@ -134,23 +137,20 @@ class _HomeScreenState extends State<HomeScreen> {
                           decoration: BoxDecoration(
                               color: Colors.deepPurple,
                               borderRadius: BorderRadius.circular(8)),
-                          child: InkWell(
-                            onTap: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) =>
-                                          const OrdersScreen()));
+                          child: TextButton(
+                            onPressed: () {
+                              launchUrl(Uri.parse(urls[index]));
                             },
-                            child: Center(
-                              child: Text(
-                                title[index],
-                                style: const TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                    color: Colors.white),
-                              ),
+                            child: Text(
+                              title[index],
+                              //entry.value,
+                              style: const TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.white),
                             ),
                           ),
+
+                          // تبدیل map به list
                         ),
                       );
                     }),
@@ -497,7 +497,7 @@ class APageViewBuilder extends StatelessWidget {
                   child: Container(
                     width: double.infinity,
                     decoration: BoxDecoration(
-                        color: Colors.grey[200],
+                        color: Colors.blue[100],
                         borderRadius: BorderRadius.circular(15)),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -507,7 +507,7 @@ class APageViewBuilder extends StatelessWidget {
                         Container(
                             height: 30,
                             width: 100,
-                            color: Colors.grey[400],
+                            color: Colors.green[500],
                             child: const Center(child: Text("HTML قالب"))),
                         const Text("قالب در دست ساخت ابروان"),
                         const Text("unName"),

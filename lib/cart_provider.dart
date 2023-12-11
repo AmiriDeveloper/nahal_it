@@ -7,13 +7,13 @@ class Cart with ChangeNotifier {
   double _price = 0.0;
   void add(Item item) {
     _items.add(item);
-    _price += item.price as double;
+    _price += item.price;
     notifyListeners();
   }
 
   void remove(Item item) {
     _items.remove(item);
-    _price -= item.price as double;
+    _price -= item.price;
     notifyListeners();
   }
 

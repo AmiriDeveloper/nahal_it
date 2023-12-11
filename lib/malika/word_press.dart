@@ -140,7 +140,7 @@ class _WordPressPliginScreenState extends State<WordPressPliginScreen> {
                                         children: [
                                           const SizedBox(width: 15),
                                           Text(
-                                            items[index].price,
+                                            items[index].price.toString(),
                                             style: word,
                                           ),
                                           const Spacer(),
