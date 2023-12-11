@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:nahal_it/amiri/news_api.dart';
 import 'package:nahal_it/cart_provider.dart';
+import 'package:nahal_it/malika/screens/menu_screen.dart';
 import 'package:nahal_it/malika/word_press.dart';
 import 'package:nahal_it/amiri/news_page.dart';
 import 'package:nahal_it/amiri/widgets.dart';
@@ -78,7 +79,10 @@ class _HomeScreenState extends State<HomeScreen> {
               Builder(builder: (context) {
                 return IconButton(
                     onPressed: () {
-                      Scaffold.of(context).openDrawer();
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const MenuAppBarScreen()));
                     },
                     icon: const Icon(Icons.menu));
               }),
