@@ -10,7 +10,7 @@ import 'package:nahal_it/malika/screens/products_screen.dart';
 import 'package:nahal_it/malika/screens/recruitment_screen.dart';
 import 'package:nahal_it/malika/screens/services_screen.dart';
 import 'package:nahal_it/malika/styles/styles.dart';
-import 'package:nahal_it/morteza/GIridViewLearn.dart';
+import 'package:nahal_it/morteza/GIridView.dart';
 // import 'package:nahal_it/screens/blog_screen.dart';
 // import 'package:nahal_it/screens/contact_screen.dart';
 // import 'package:nahal_it/screens/orders_screen.dart';
