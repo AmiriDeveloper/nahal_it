@@ -13,8 +13,8 @@ class CartScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Center(child: Text("سبد خرید")),
       ),
-      body: SizedBox(
-        height: 500,
+      body: Expanded(
+        // height: 500,
         child: ListView.builder(
           itemCount: cart.basketItem.length,
           itemBuilder: (context, i) {

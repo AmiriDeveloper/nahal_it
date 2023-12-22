@@ -1,40 +1,26 @@
 class ThingsList {
-  String title, images, url;
+  String title, images;
 
-  ThingsList({required this.title, required this.images, required this.url});
+  ThingsList({required this.title, required this.images});
 }
 
 List thingsList = [
   ThingsList(
-      title: "خدمات هوش مصنوعی",
-      images: "images/python.png",
-      url:
-          "https://nahalit.com/%D9%87%D9%88%D8%B4-%D9%85%D8%B5%D9%86%D9%88%D8%B9%DB%8C/"),
+    title: "خدمات هوش مصنوعی",
+    images: "images/python.png",
+  ),
   ThingsList(
-      title: "طراحی وبسایت اختصاصی",
-      images: "images/writing.png",
-      url:
-          "https://nahalit.com/%d8%b7%d8%b1%d8%a7%d8%ad%db%8c-%d8%b3%d8%a7%db%8c%d8%aa-%d8%a7%d8%ae%d8%aa%d8%b5%d8%a7%d8%b5%db%8c/"),
+    title: "طراحی وبسایت اختصاصی",
+    images: "images/mobile.png",
+  ),
+  ThingsList(title: "خدمات شبکه های اجتماعی", images: "images/instagram.png"),
   ThingsList(
-      title: "خدمات اپلیکیشن موبایل",
-      images: "images/mobile.png",
-      url:
-          "https://nahalit.com/%d8%a7%d9%be%d9%84%db%8c%da%a9%db%8c%d8%b4%d9%86-%d9%85%d9%88%d8%a8%d8%a7%db%8c%d9%84/"),
-  ThingsList(
-      title: "خدمات شبکه های اجتماعی",
-      images: "images/instagram.png",
-      url:
-          "https://nahalit.com/%d8%ae%d8%af%d9%85%d8%a7%d8%aa-%d8%b4%d8%a8%da%a9%d9%87-%d9%87%d8%a7%db%8c-%d8%a7%d8%ac%d8%aa%d9%85%d8%a7%d8%b9%db%8c/"),
-  ThingsList(
-      title: "خدمات کسب و کار",
-      images: "images/building.png",
-      url:
-          "https://nahalit.com/%d8%ae%d8%af%d9%85%d8%a7%d8%aa-%da%a9%d8%b3%d8%a8-%d9%88-%da%a9%d8%a7%d8%b1/"),
+    title: "خدمات کسب و کار",
+    images: "images/building.png",
+  ),
   ThingsList(
     title: "خدمات طراحی وبسایت و سئو",
     images: "images/art.png",
-    url:
-        "https://nahalit.com/%d8%ae%d8%af%d9%85%d8%a7%d8%aa-%d9%88%d8%a8%d8%b3%d8%a7%db%8c%d8%aa-%d8%b3%d8%a6%d9%88-%d9%88%d8%a8%d8%b3%d8%a7%db%8c%d8%aa/",
   ),
 ];
 
