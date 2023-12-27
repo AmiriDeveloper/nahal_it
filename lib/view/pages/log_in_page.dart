@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:nahal_it/aiden/sign_in.dart';
+import 'package:nahal_it/view/pages/sign_in_page.dart';
 import 'package:nahal_it/malika/color&font_managment.dart';
 
-import '../home_screen.dart';
+import '../../home_screen.dart';
 
 class LogInTwo extends StatefulWidget {
   const LogInTwo({super.key});

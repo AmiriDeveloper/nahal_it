@@ -1,6 +1,6 @@
 import "package:flutter/material.dart";
-import "package:nahal_it/amiri/cart_screen.dart";
-import "package:nahal_it/cart_provider.dart";
+import 'package:nahal_it/view/screens/cart_screen.dart';
+import 'package:nahal_it/controller/cart_provider.dart';
 import "package:provider/provider.dart";
 import 'package:badges/badges.dart' as badges;
 

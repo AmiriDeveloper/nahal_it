@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'log_in_one.dart';
+import 'wellcom_page.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);

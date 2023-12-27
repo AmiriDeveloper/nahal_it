@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:nahal_it/malika/color&font_managment.dart';
 
-import '../home_screen.dart';
+import '../../home_screen.dart';
 
 class SignIn extends StatefulWidget {
   const SignIn({super.key});

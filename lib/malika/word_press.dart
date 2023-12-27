@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:nahal_it/amiri/selling_page.dart';
 import 'package:provider/provider.dart';
-import '../amiri/api.dart';
-import '../cart_provider.dart';
-import '../amiri/cart_screen.dart';
+import '../model/api.dart';
+import '../controller/cart_provider.dart';
+import '../view/pages/selling_page.dart';
+import '../view/screens/cart_screen.dart';
 import 'color&font_managment.dart';
 import 'package:badges/badges.dart' as badges;
 

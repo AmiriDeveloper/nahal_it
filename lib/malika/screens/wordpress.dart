@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:nahal_it/amiri/api.dart';
+import 'package:nahal_it/model/api.dart';
 // import 'package:nahal_it/malika/color&font_managment.dart';
 import 'package:nahal_it/malika/styles/styles.dart';
 // import 'package:nahal_it/SideMenu/class_list_title.dart';
@@ -100,7 +100,7 @@ class _WordPressPliginScreenState extends State<WordPressPliginScreen> {
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            Text(
+                            const Text(
                                 // items[index].price,
                                 // style: bodySmaller1,
                                 "we will add text here"),

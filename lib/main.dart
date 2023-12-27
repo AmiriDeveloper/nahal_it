@@ -1,12 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:nahal_it/aiden/log_in_two.dart';
-import 'package:nahal_it/aiden/sign_in.dart';
-import 'package:nahal_it/amiri/work_samples.dart';
-import 'package:nahal_it/cart_provider.dart';
+import 'package:nahal_it/view/pages/log_in_page.dart';
+import 'package:nahal_it/controller/cart_provider.dart';
 import 'package:provider/provider.dart';
-import 'aiden/log_in_one.dart';
-import 'amiri/widgets.dart';
-import 'home_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -36,11 +31,11 @@ class MyApp extends StatelessWidget {
             useMaterial3: true,
           ),
 
-          home: Scaffold(
+          home: const Scaffold(
             drawer: Drawer(
               // صدا زدن رنگ پس زمینه از themeData
               backgroundColor: Colors.deepPurple,
-              child: DrawerBook(),
+              // child: DrawerBook(),
             ),
             body: //CartScreen()
                 //  SellingPage(),
@@ -48,7 +43,7 @@ class MyApp extends StatelessWidget {
                 //  const HomeScreen(),
                 //   SplashScreen(),
                 // SignIn(),
-                const LogInTwo(),
+                LogInTwo(),
           ),
         );
       }),
