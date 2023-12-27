@@ -1,6 +1,5 @@
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:nahal_it/malika/screens/appbar_screen.dart';
-import 'package:nahal_it/malika/styles/styles.dart';
+import 'package:nahal_it/widgets/styles.dart';
 // import 'package:nahal_it/screens/appbar_screen.dart';
 // import 'package:nahal_it/styles/styles.dart';
 // import 'package:side_menu_app/screens/appbar_screen.dart';
@@ -28,9 +27,9 @@ class ContactUsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const AppBarScreen(
-        title: 'تماس با ما',
-      ),
+      //  appBar: const //AppBarScreen(
+      // title: 'تماس با ما',
+      //),
       body: SingleChildScrollView(
         child: SafeArea(
           child: Padding(

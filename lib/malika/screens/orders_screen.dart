@@ -1,8 +1,6 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:nahal_it/malika/SideMenu/class_list_title.dart';
-import 'package:nahal_it/malika/screens/appbar_screen.dart';
-import 'package:nahal_it/malika/styles/styles.dart';
+import 'package:nahal_it/widgets/styles.dart';
 // import 'package:nahal_it/SideMenu/class_list_title.dart';
 // import 'package:nahal_it/color&font_managment.dart';
 // import 'package:nahal_it/screens/appbar_screen.dart';
@@ -34,7 +32,7 @@ class _OrdersScreenState extends State<OrdersScreen> {
     'تدوین فیلم',
     'تدوین صدا و صداگذاری',
   ];
-
+/*
   List<ListTexts> texts = [
     ListTexts(
       texts:
@@ -66,15 +64,15 @@ class _OrdersScreenState extends State<OrdersScreen> {
           'لازم به ذکر است شما می توانید پرداخت بهای انجام پروژه را به صورت قسطی نیز پرداخت نمایید.',
     ),
   ];
-
+*/
   bool showInfoWidget = true;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const AppBarScreen(
-        title: 'ثبت سفارش',
-      ),
+      // appBar: const AppBarScreen(
+      //   title: 'ثبت سفارش',
+      // ),
       body: Padding(
         padding: const EdgeInsets.all(10),
         child: SingleChildScrollView(
@@ -287,13 +285,15 @@ class _OrdersScreenState extends State<OrdersScreen> {
                                       shrinkWrap: true,
                                       physics:
                                           const NeverScrollableScrollPhysics(),
-                                      itemCount: texts.length,
-                                      itemBuilder: (context, index) => Padding(
-                                        padding: const EdgeInsets.only(
+                                      itemCount: 5, //texts.length,
+                                      itemBuilder: (context, index) =>
+                                          const Padding(
+                                        padding: EdgeInsets.only(
                                           top: 5,
                                         ),
                                         child: Text(
-                                          texts[index].texts,
+                                          "qs",
+                                          //   texts[index].texts,
                                           style: bodySmall,
                                         ),
                                       ),

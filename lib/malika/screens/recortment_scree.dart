@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'color&font_managment.dart';
+import '../../widgets/color&font_managment.dart';
 
 class RecruitmentScreen extends StatefulWidget {
   const RecruitmentScreen({super.key});

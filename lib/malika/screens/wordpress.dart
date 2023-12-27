@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:nahal_it/model/api.dart';
 // import 'package:nahal_it/malika/color&font_managment.dart';
-import 'package:nahal_it/malika/styles/styles.dart';
+import 'package:nahal_it/widgets/styles.dart';
 // import 'package:nahal_it/SideMenu/class_list_title.dart';
 // import 'package:nahal_it/color&font_managment.dart';
 // import 'package:nahal_it/styles/styles.dart';

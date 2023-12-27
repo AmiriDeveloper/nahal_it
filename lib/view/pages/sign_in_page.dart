@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:nahal_it/malika/color&font_managment.dart';
+import 'package:nahal_it/widgets/color&font_managment.dart';
 
 import '../../home_screen.dart';
 

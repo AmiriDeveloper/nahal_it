@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:nahal_it/malika/SideMenu/class_list_title.dart';
-import 'package:nahal_it/malika/color&font_managment.dart';
-import 'package:nahal_it/malika/screens/appbar_screen.dart';
+import 'package:nahal_it/widgets/color&font_managment.dart';
 // import 'package:nahal_it/SideMenu/class_list_title.dart';
 // import 'package:nahal_it/screens/appbar_screen.dart';
 // import 'package:nahal_it/styles/styles.dart';
@@ -17,6 +15,7 @@ class RecruitmentScreen extends StatefulWidget {
 }
 
 class _RecruitmentScreenState extends State<RecruitmentScreen> {
+  /*
   List<ListTexts1> texts = [
     ListTexts1(
       texts1:
@@ -43,13 +42,13 @@ class _RecruitmentScreenState extends State<RecruitmentScreen> {
           'همچنین شما می توانید بصورت (برنامه نویس، فتوشاپ و گرافیک کار یا موشن…) در سایت نهال آی تی ثبت نام نمایید و به شما پروژه می دهیم و به صورت پروژه ای فعالیت نمایید.',
     ),
   ];
-
+*/
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const AppBarScreen(
+      /*  appBar: const AppBarScreen(
         title: 'استخدام',
-      ),
+      ),*/
       body: SafeArea(
         child: SingleChildScrollView(
           child: Padding(
@@ -92,13 +91,14 @@ class _RecruitmentScreenState extends State<RecruitmentScreen> {
                       child: ListView.builder(
                         shrinkWrap: true,
                         physics: const NeverScrollableScrollPhysics(),
-                        itemCount: texts.length,
-                        itemBuilder: (context, index) => Padding(
-                          padding: const EdgeInsets.only(
+                        itemCount: 6, // texts.length,
+                        itemBuilder: (context, index) => const Padding(
+                          padding: EdgeInsets.only(
                             top: 15,
                           ),
                           child: Text(
-                            texts[index].texts1,
+                            "dd",
+                            // texts[index].texts1,
                             style: bodySmall,
                           ),
                         ),

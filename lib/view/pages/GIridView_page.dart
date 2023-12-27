@@ -1,3 +1,5 @@
+// ignore_for_file: file_names
+
 import 'package:flutter/material.dart';
 import 'package:video_player/video_player.dart';
 // import 'package:nahal_it/VideoPlayerWidget.dart';
@@ -35,6 +37,7 @@ class VideoPlayerWidget extends StatefulWidget {
   const VideoPlayerWidget({Key? key}) : super(key: key);
 
   @override
+  // ignore: library_private_types_in_public_api
   _VideoPlayerWidgetState createState() => _VideoPlayerWidgetState();
 }
 

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:readmore/readmore.dart';
-import '../../malika/color&font_managment.dart';
+import '../../widgets/color&font_managment.dart';
 
 class SellingPage extends StatelessWidget {
   SellingPage({super.key});
