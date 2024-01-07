@@ -13,6 +13,7 @@ import 'view/screens/news_list_screen.dart';
 import 'view/screens/poster_screen.dart';
 import 'view/screens/product_list_screen.dart';
 import 'view/screens/services_screen.dart';
+import 'widgets/NavigationDrawer.dart';
 
 // ignore: must_be_immutable
 class HomeScreen extends StatefulWidget {
@@ -54,7 +55,40 @@ class _HomeScreenState extends State<HomeScreen> {
         //  appBar: newMethod(size),
 
         appBar: AppBar(
-          //backgroundColor: Colors.green,
+          actions: [
+            Container(
+              width: 60,
+              padding: const EdgeInsets.only(right: 16.0),
+              child: IconButton(
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => (const CartScreen())));
+                },
+                icon: badges.Badge(
+                  position: badges.BadgePosition.topEnd(top: -10, end: -12),
+                  showBadge: true,
+                  ignorePointer: false,
+                  // onTap: () {},
+                  badgeContent: Consumer<Cart>(builder: (context, cart, child) {
+                    return Text("${cart.count}",
+                        style:
+                            const TextStyle(color: Colors.white, fontSize: 10));
+                  }),
+                  badgeStyle: badges.BadgeStyle(
+                    shape: badges.BadgeShape.circle,
+                    badgeColor: Colors.amber,
+                    padding: const EdgeInsets.all(5),
+                    borderRadius: BorderRadius.circular(4),
+                    borderSide: const BorderSide(color: Colors.black, width: 2),
+                    elevation: 0,
+                  ),
+                  child: const Icon(Icons.shopping_cart_rounded),
+                ),
+              ),
+            ),
+          ],
           toolbarHeight: 80,
           title: const SizedBox(
             height: 40,
@@ -65,43 +99,11 @@ class _HomeScreenState extends State<HomeScreen> {
                       borderRadius: BorderRadius.all(Radius.circular(25)))),
             ),
           ),
-          leadingWidth: size.width / 4,
-          leading: Row(
-            children: [
-              const SizedBox(width: 15),
-              const Icon(Icons.menu),
-              IconButton(
-                  onPressed: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const CartScreen()));
-                  },
-                  icon: badges.Badge(
-                      position: badges.BadgePosition.topEnd(top: -10, end: -12),
-                      showBadge: true,
-                      ignorePointer: false,
-                      // onTap: () {},
-                      badgeContent:
-                          Consumer<Cart>(builder: (context, cart, child) {
-                        return Text("${cart.count}",
-                            style: const TextStyle(
-                                color: Colors.white, fontSize: 10));
-                      }),
-                      badgeStyle: badges.BadgeStyle(
-                        shape: badges.BadgeShape.circle,
-                        badgeColor: Colors.amber,
-                        padding: const EdgeInsets.all(5),
-                        borderRadius: BorderRadius.circular(4),
-                        borderSide:
-                            const BorderSide(color: Colors.black, width: 2),
-                        elevation: 0,
-                      ),
-                      child: const Icon(Icons.shopping_cart_rounded))),
-            ],
-          ),
+          leadingWidth: size.width / 8,
+          // leading: NavigationDrawer(),
+          backgroundColor: Colors.white,
         ),
-
+        drawer: Navigation_Drawer(),
         ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         body: SingleChildScrollView(
           child: Column(
@@ -139,7 +141,7 @@ class _HomeScreenState extends State<HomeScreen> {
               HomePageNews(size: size),
               const Text("اپلیکیشن نهال ای تی فروش انواع قالب و اموزش"),
               const SizedBox(height: 20),
-              DescriptionContainer(size: size),
+              // DescriptionContainer(size: size),
               const SizedBox(height: 20),
               Center(
                   child: Text(
